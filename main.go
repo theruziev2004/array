@@ -43,7 +43,15 @@ func main() {
 		}
 	}
 	fmt.Println(telephone)
+
+	scores := [5]int{4, 2, 4, 3, 5}
+	sum := 0
+	for _, score := range scores{
+		sum += score
+	}
+	var middle float64 = float64(sum) / float64(len(scores))
+	fmt.Println(middle)
 }
 
-
 //// [5]int {a, b, c , d, e}----- среднее арифметическое
+
