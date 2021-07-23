@@ -30,9 +30,20 @@ func main() {
 	}
 	fmt.Println(array)
 
-	for index, _ := range array{
-		array[index]++
-		//fmt.Printf("array[%d] = %d\n", index, value)
+	for index, value := range array{
+		//array[index]++
+		fmt.Printf("array[%d] = %d\n", index, value)
 	}
 	fmt.Println(array)
+	//                            0               1     2     3     4       5
+	var telephone = [6]string{"samsung galaxy", "sm", "sw", "sq", "se", "iphone"}
+	for i := 0; i < len(telephone); i++ {
+		if i % 2 != 0 {
+			telephone[i] = "samsung galaxy"
+		}
+	}
+	fmt.Println(telephone)
 }
+
+
+//// [5]int {a, b, c , d, e}----- среднее арифметическое
