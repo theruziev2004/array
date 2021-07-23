@@ -1,1 +1,1 @@
-// ARRAT
+// ARRAY
