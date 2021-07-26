@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func basicTask()  {
 	// string
@@ -41,17 +43,7 @@ func firstTask()  {
 	var middle float64 = float64(sum) / float64(len(scores))
 	fmt.Println(middle)
 }
-func secondTask()  {
-	//////////////////////////         0          1     2     3     4    5
-	var telephone = [6]string{"samsung galaxy", "sm", "sw", "sq", "se", "ip"}
-	//                       {"samsung galaxy", "sam", "sw", "sam", "se", "sam"}
-	for index, _ := range telephone {
-		if index % 2 != 0{
-			telephone[index] = "sam-gal"
-		}
-	}
-	fmt.Println(telephone)
-}
+
 
 func slice()  {
 	var x []string
@@ -83,8 +75,56 @@ func slice()  {
 	fmt.Println(slice1, "\n", slice2)
 	slice2 = append(slice2, 2)
 	fmt.Println(slice1, "\n", slice2)
+
+
 }
 
-func main() {
+func secondTask()  {
+	//////////////////////////         0          1     2     3     4    5
+	var telephone = [6]string{"samsung galaxy", "sm", "sw", "sq", "se", "ip"}
+	//                       {"samsung galaxy", "sam", "sw", "sam", "se", "sam"}
+	for index, _ := range telephone {
+		if index % 2 != 0{
+			telephone[index] = "sam-gal"
+		}
+	}
+	fmt.Println(telephone)
+}
 
+
+//----------------------Home Work-------------------------------\\
+// написать функцию в котором передаётся срез в котором будут оценка
+// функция которая будет возвращать индекс самого большого
+//        0  1  2  3  4  5
+// []int {1, 2, 4, 5, 3}
+//индекс максимального бала -----> 3(индекс)
+// найти само максимальное число ---->5(число)
+
+
+
+func main() {
+	//                  0    1   2  3       4
+/*	var values = [5]int{0, 1000, 1000, 4, -20000000}
+	max := values[0]
+	for index, v := range values {
+		if v > max {
+			max = v
+		}
+	}
+	fmt.Println(max)*/
+	fmt.Println(maxIndex([]int{1, 2, 4, 5, 6, 7}))
+}
+
+
+func maxIndex (slice[]int) (int, int) {
+
+	amountNumber, amountIndex := 0, 0
+
+	for index, value := range slice {
+		if amountNumber < value {
+			amountNumber = value
+			amountIndex = index
+	}
+}
+return amountNumber, amountIndex
 }
