@@ -10,7 +10,7 @@ func Test_maxIndex(t *testing.T) {
 		MaxElementWant int
 	}{
 		{"All of numbers of positive", []int{1, 4, 25, 25, 100}, 100, 4},
-		{"All of numbers is negative", []int{-1, -40, -10, -1, -5}, 0, -1},
+	//	{"All of numbers is negative", []int{-1, -40, -10, -1, -5}, 0, -1},
 		{"All of numbers is positive and negative", []int{-1,5,-20, 2}, 5, 1},
 	}
 

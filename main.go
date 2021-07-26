@@ -117,7 +117,7 @@ func main() {
 
 
 func maxIndex (slice[]int) (int, int) {
-
+	
 	amountNumber, amountIndex := 0, 0
 
 	for index, value := range slice {
