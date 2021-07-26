@@ -116,9 +116,9 @@ func main() {
 }
 
 
-func maxIndex (slice[]int) (int, int) {
-	
-	amountNumber, amountIndex := 0, 0
+func maxIndex (slice []int) (int, int) {
+
+	amountNumber, amountIndex := 0, slice[0]
 
 	for index, value := range slice {
 		if amountNumber < value {
@@ -128,3 +128,8 @@ func maxIndex (slice[]int) (int, int) {
 }
 return amountNumber, amountIndex
 }
+
+
+//напищите функцию которая принимает slice int значений и возвращает сумму элементов данного slice
+// тоже самое только найдите среднее значение данного slice
+// к функциям написать юнитесты и выложить в гитхаб
